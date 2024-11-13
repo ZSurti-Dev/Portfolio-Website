@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moderustic:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./expwings.css">
+    <title>Explore WINGS</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+          <div class="logo">   
+            <a href="./index.html"><img src="./assets/logo.png" alt="WINGS logo"></a>
+          </div>
+          <nav>
+            <ul>
+                <li><a href="./book&prepare.html">BOOK & PREPARE</a></li>
+                <li><a href="./myBooking.html">MY BOOKING</a></li>
+                <li><a href="./expwings.html">EXPLORE WINGS</a></li>
+                <li><a href="./signup.html">LOGIN & SIGNUP</a></li>
+                <li class="dropdown">
+                    <a href="#">SUPPORT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </div>    
+      </header>
+     <section class="container">
+        <section class="travelClass">
+            <h2>Travel Classes </h2>   
+            <div class="travelClass-container">
+                <button><a href=""> WINGS Economy</a> </button>
+                <button><a href=""> WINGS Premium Economy </a> </button>
+                <button><a href=""> WINGS BUSINESS </a> </button>
+                <button><a href=""> WINGS FIRST </a> </button>
+                           
+            </div>        
+        </section>
+        <section class="services">
+            <h2> Travel Information </h2>
+            <div class="services-container">
+                <button><a href=""> Culinary Services </a> </button>
+                <button><a href=""> Entertainment</a> </button>
+                <button><a href=""> Duty Free Shopping</a> </button>
+                         
+            </div>        
+        </section>
+       
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>        
+        $(document).ready(function() {
+      const hamburger = $('.hamburger');
+      const navMenu = $('nav ul');
+      hamburger.click(mobileMenu);
+      function mobileMenu() {
+        hamburger.toggleClass('active');
+        navMenu.toggleClass('active');     }
+
+      $('nav a').click(closeMenu);
+      function closeMenu() {
+        hamburger.removeClass('active');
+        navMenu.removeClass('active');
+  }
+});
+    </script>   
+
+
+</body>
+</html>

@@ -1,0 +1,675 @@
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Nav-bar(Updated) */
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .logo img {
+    max-width: 80px;
+    height: auto;
+  }
+  
+  nav ul {     
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }   
+  
+  nav ul li {
+    margin: 0 0.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #b60505;
+    color: white;
+  }
+  
+  /* Responsive Dsign */
+  @media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        
+    }
+  
+    nav ul.active {
+        left: 0;
+    }
+  
+    nav ul li {
+        margin: 16px 0;
+    }
+  }
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content li {
+    margin: 0;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/* Flight Booking */
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.flight-booking{
+    background-color: rgba(238, 238, 238, 0.9);
+    max-width: 900px;
+    margin: -500px auto auto;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; 
+    
+}
+.flight-booking h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    
+    text-align: center;
+}
+
+.trip-type{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.trip-type label {
+    margin: 0 1rem;
+}
+.fromLocation, .toLocation{
+    width: 800px;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    margin:10px 20px 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.from-img{
+    margin: 10px;
+}
+.from-img img{
+    width: 40px;
+}
+
+.from-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+#small-text{
+    font-size: 16px;
+    color: grey;
+    margin: 0;
+}
+#from{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1.5px solid #D80100;
+}
+
+.to-img{
+    margin: 10px;
+}
+.to-img img{
+    width: 40px;
+}
+
+.to-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+#small-text{
+    font-size: 16px;
+    color: grey;
+    margin: 0;
+}
+#to{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1.5px solid #D80100;
+}
+.dep-date, .retu-date{
+    width: 340px;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.date_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.dep-img{
+    margin: 10px;
+}
+.dep-img img{
+    width: 40px;
+}
+
+.dep-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+#small-text{
+    font-size: 16px;
+    color: grey;
+    margin: 0;
+}
+#departure-date{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1.5px solid #D80100;
+}
+
+
+.retu-img{
+    margin: 10px;
+}
+.retu-img img{
+    width: 40px;
+}
+
+.retu-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+#small-text{
+    font-size: 16px;
+    color: grey;
+    margin: 0;
+}
+#return-date{
+
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border: none;
+   text-align: center;
+}
+.booking-calender{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 35px; 
+    margin: 10px;
+}
+.search-btn{
+    background-color: #D80100;
+    color: white;
+    width: 800px;
+    height: 70px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    justify-content: center;
+    margin: 0 15px;
+}
+/* Return Booking section */
+#returnContainer{
+    display: none;
+}
+/* Booking Section */ 
+.booking-section{
+    display: flex;
+   justify-content: space-between;
+   margin-top: 50px;
+}
+    
+.status-img{
+    max-width: 30px;
+    max-height: 30px;
+    margin: 10px;
+    padding: 0;
+
+}
+
+.flight-status, .my-booking, .miles-more{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+   
+}
+.flight-status:hover, .my-booking:hover, .miles-more:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+ }
+.search-btn:hover{
+    background-color: #b60505;
+    
+}
+
+/* Flight offers Section */
+.offer-price {
+    display: flex;
+    color: #b60505;
+    gap: 10px;
+  }
+  
+  .flight-offers {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .flight-offers .offerCard {
+    flex: 0 0 auto;
+    width: 355px;
+    height: 500px;
+    background-color: #fcfafa;
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: left;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .flight-offers .offerCard img {
+    width: 100%;
+    height: 370px;
+    margin: 0;
+  }
+  
+  main h2 {
+    font-size: 2.5rem;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  .offerCard h3 {
+    font-size: 1.1rem;
+  }
+  
+  #leftScroll-btn,
+  #rightScroll-btn {
+    position: absolute; /* Make buttons positioned within the container */
+    top: 50%; /* Center buttons vertically */
+    transform: translateY(-50%); /* Offset position for centering */
+    /* Adjust button sizes and margins as needed */
+    width: 50px;
+    height: 50px;
+    margin: 0 10px; /* Add margin between buttons and container edges */
+    cursor: pointer; /* Set cursor to pointer on hover */
+    opacity: 0; /* Hide buttons initially */
+  }
+  
+  .offerCard:hover #leftScroll-btn,
+  .offerCard:hover #rightScroll-btn {
+    opacity: 1; /* Show buttons on hover over container */
+  }
+  
+  #leftScroll-btn {
+    left: 0; /* Position left button at the beginning */
+  }
+  
+  #rightScroll-btn {
+    right: 0; /* Position right button at the end */
+  }
+  .flight-offers .offerCard:hover{
+    scale: 1.05;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+  }
+  /* Assistance section */
+  .assistance {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .assistance .assistance-card{
+    flex: 0 0 auto;
+    width: 300px;
+    height: 480px;
+    background-color: #fcfafa;
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .assistance .assistance-card img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    
+  }
+
+  .assistance-text{
+    margin-bottom: 75px;
+    text-align: justify;
+    line-height: 30px;
+  }
+
+
+  .assistance .assistance-card button{
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    background-color: #D80100;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .assistance .assistance-card:hover{
+    transform: translate3d(0, -5px, 0);
+  } 
+  .assistance-card button:hover{
+    background-color: #b60505;
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  .section-headertext{
+    font-size: 2.5rem;
+    margin: 30px 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  /* Great Deals section */
+  
+  .deal-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:center;
+    align-items: stretch;
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .deal-card-container{
+      grid-template-columns: 1fr;
+    }
+    
+  }
+  
+  .deal-card-container .deal-card{
+    
+    width: 600px;
+    height: 550px;
+    background-color: #fcfafa;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    line-height: 10px;
+  }
+  
+  .deal-card-container .deal-card img { 
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+}
+.deal-card:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sameline{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.deal-card p{
+    margin-top: 30px;
+    font-weight: 300;
+}
+.price-text{
+    color: #D80100;
+    font-size: 1.5rem;
+}
+.deal-title{
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+.smallCards-container{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.smallCards-container .smallCards{
+    width: 250px;
+    height: 200px;
+    background-color: rgb(244, 246, 247);
+    padding: 20px;
+    margin: 10px 40px;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    text-align: left;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.smallCards p{
+    font-size: .9rem;
+}
+.smallCards a{
+  text-decoration: none;
+  color: black !important;
+}
+
+/* footer */
+.footer-container{
+    display: flex;
+    background-color: #f2f2f2;
+    margin: 20px auto;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.footer-container .footer-containt{
+    flex: 0 0 auto;
+    width: 300px;
+    height: 250px;
+}
+.footer-containt  h3{
+    font-size: 1.3rem;
+    color: #D80100;
+    margin-bottom: 20px;
+}
+.footer-containt ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-containt li{
+    margin: 15px 0;
+    padding: 0px px;
+    border-bottom: 1px solid #848181;
+    font-weight: 300;
+    width: 220px;
+
+}
+.footer-containt li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    
+}
+.footer-containt li a:hover{
+    color: #b60505;
+    font-weight: 500;
+}
+
+.brand-info{
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.footer-info img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.footer-info p{
+    font-size:12px;
+    margin: 0;
+    padding: 0;
+}
+.footer-info ul{
+    list-style: none;
+    margin: 0 50px;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+.footer-info li{
+    margin: 0;
+    padding: 0;
+}
+.footer-info li a{
+    text-decoration: none;
+    color: #959595;
+    font-size: 16px;
+    
+}
+.footer-info li a:hover{
+    color: #b60505;
+    font-weight: 500;
+}

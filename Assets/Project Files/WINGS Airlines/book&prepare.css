@@ -1,0 +1,321 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+/* Navigation bar */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px 20px;
+  
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.logo img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+nav ul {     
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}   
+
+nav ul li {
+  margin: 0 0.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #b60505;
+  color: white;
+}
+
+/* Responsive Dsign */
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav ul {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  nav ul.active {
+      left: 0;
+  }
+
+  nav ul li {
+      margin: 16px 0;
+  }
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* Flights Section */
+.container{
+  display: flex;
+  justify-content: center;
+   
+}
+
+.flights{
+  border: 2px solid #000000;
+  margin: 50px 50px;
+  text-align: left;
+  border-radius: 20px;
+  max-width: 450px;
+   
+}
+.flights h2{
+  font-size: 1.6rem;
+  color: #000000;
+  margin-left: 50px;
+  
+}
+.flights .flights-container{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 20px;
+  flex-wrap: wrap;
+  line-height: 20px;
+}
+
+.flights-container button{
+  width: 330px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2; /* Lighter background color */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px; /* Add padding for more space */
+  text-decoration: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out; /* Add smooth transition for hover effect */
+
+}
+.flights-container button:hover{
+  background-color: #b60505;
+  color: white;
+  transform: translateY(-2px);  
+}
+.flights-container button > a{
+  text-decoration: none;
+  color: #280290;
+  font-size: 1.2rem   
+}
+.flights-container button > a:hover{
+  color: white;
+  transform: translate3d(0, -2px, 0);
+  font-weight: 550;
+  font-size: 1.3rem;
+}
+
+.travelInfo{
+  border: 2px solid #0a0000;
+  margin: 50px 50px;
+  text-align: left;
+  border-radius: 20px;
+  max-width: 450px;   
+}
+.travelInfo h2{
+  font-size: 1.6rem;
+  color: #000000;
+  margin-left: 50px;
+  
+}
+.travelInfo .travelInfo-container{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 20px;
+  flex-wrap: wrap;
+  line-height: 20px;
+}
+
+.travelInfo-container button{
+  width: 330px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2; /* Lighter background color */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px; /* Add padding for more space */
+  text-decoration: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out; /* Add smooth transition for hover effect */ 
+
+}
+.travelInfo-container button:hover{
+  background-color: #b60505;
+  color: white;
+  transform: translateY(-2px); 
+}
+.travelInfo-container button > a{
+  text-decoration: none;
+  color: #280290;
+  font-size: 1.2rem; 
+}
+.travelInfo-container button > a:hover{
+  color: white;
+  transform: translate3d(0, -2px, 0);
+  font-weight: 550;
+  font-size: 1.3rem;   
+}
+
+/* media queries */
+
+@media (max-width: 480px) {
+  /* Styles for mobile devices */
+  body {
+    font-size: 14px;
+  }
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+  nav ul {
+    margin-top: 50px;
+  }
+  .flights {
+    margin: 20px;
+    max-width: 100%;
+  }
+  .travelInfo {
+    margin: 20px;
+    max-width: 100%;
+  }
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Styles for tablets in portrait orientation */
+  body {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets in landscape orientation */
+  body {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Styles for desktops */
+  body {
+    font-size: 18px;
+  }
+  .logo img {
+    width: 150px;
+    height: 150px;
+  }
+  nav ul {
+    margin-top: 50px;
+  }
+  .flights {
+    margin: 20px;
+    max-width: 100%;
+  }
+  .travelInfo {
+    margin: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

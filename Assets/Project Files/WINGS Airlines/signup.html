@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINGS Airlines - Sign Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="WINGS logo">
+            </div>
+            
+    </header>
+
+    <main class="main-content">
+        <section class="return">
+            <a href="index.html">&larr; Back to Home</a>
+        </section>
+
+        <div class="form-container">
+            <div class="registration-form regis-section content">
+                <h2 class="title-text">Create Your Account</h2>
+                <nav class="form-nav">
+                    <ul>
+                        <li class="active">Registration</li>
+                        <li>Personal Data</li>
+                        <li>Communication</li>
+                        <li>Confirmation</li>
+                    </ul>
+                </nav>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                    <p class="form-footer" >Already have an account? <a href="#" id="user_login">Login</a></p>
+                </form>
+                
+            </div>
+            <!-- Login form -->
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Continue</button>
+                <button type="button" class="btn btn-secondary login-back-btn">Back</button>
+            </form>
+
+            <!-- Personal Details Section -->
+
+            <div class="registration-form persona-section content">
+                <h2>Personal Details</h2>
+                <nav class="form-nav">
+                    <ul>
+                        <li>Registration</li>
+                        <li class="active">Personal Data</li>
+                        <li>Communication</li>
+                        <li>Confirmation</li>
+                    </ul>
+                </nav>
+                <form id="personal-form">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="title" value="Mr" required> Mr</label>
+                            <label><input type="radio" name="title" value="Mrs" required> Mrs</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <div class="dob-input">
+                            <input type="number" id="day" name="day" placeholder="DD" required min="1" max="31">
+                            <input type="number" id="month" name="month" placeholder="MM" required min="1" max="12">
+                            <input type="number" id="year" name="year" placeholder="YYYY" required min="1900" max="2023">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary persona-back-btn">Back</button>
+                        <button type="submit" class="btn btn-primary">Continue</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="registration-form comm-section content">
+                <h2>Communication Preferences</h2>
+                <nav class="form-nav">
+                    <ul>
+                        <li>Registration</li>
+                        <li>Personal Data</li>
+                        <li class="active">Communication</li>
+                        <li>Confirmation</li>
+                    </ul>
+                </nav>
+                <form id="communication-form">
+                    <div class="form-group">
+                        <p class="consent-text">
+                            I would like to receive information and offers from Lufthansa Group airlines. I consent to being contacted via electronic communication services for personalized offers and customer satisfaction surveys.
+                        </p>
+                        <div class="consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Yes, I give my consent.</label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary comm-back-btn">Back</button>
+                        <button type="submit" class="btn btn-primary">Confirm and Continue</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="registration-form confi-section content">
+                <h2>Registration Confirmed</h2>
+                <nav class="form-nav">
+                    <ul>
+                        <li>Registration</li>
+                        <li>Personal Data</li>
+                        <li>Communication</li>
+                        <li class="active">Confirmation</li>
+                    </ul>
+                </nav>
+                <div class="confirmation-message">
+                    <p>We have sent an activation link to <span id="confirmation-email"></span>.</p>
+                    <p>Please click the activation link to confirm your registration.</p>
+                    <p>The link is valid for 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <div class="brand-info">
+                <img src="./assets/logo.png" alt="logo">
+                <p>&copy; 2021 WINGS Airlines. All rights reserved.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Imprint</a></li>
+                <li><a href="#">Lufthansa Group</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Data Protection</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./signup-script.js"></script>
+</body>
+</html>

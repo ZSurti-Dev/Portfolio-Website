@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./kilimanjaro.css">
+    <title>WINGS - Find Your Flight</title>
+</head>
+<body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">   
+        <a href = "./index.html" > <img src="./assets/logo.png" alt="WINGS logo"> </a>
+        </div>
+        <nav>
+          <ul>
+              <li><a href="./book&prepare.html">BOOK & PREPARE</a></li>
+              <li><a href="./myBooking.html">MY BOOKING</a></li>
+              <li><a href="./expwings.html">EXPLORE WINGS</a></li>
+              <li><a href="./signup.html">LOGIN & SIGNUP</a></li>
+              <li class="dropdown">
+                  <a href="#">SUPPORT</a>
+                  <ul class="dropdown-content">
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                  </ul>
+              </li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+      </div>    
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="main-flightcontent">
+                <div class="main-title">
+                    <h2>Find Flight Tickets To Kilimanjaro</h2>  
+                </div>
+                <form class="flight-search-form">
+                    <div class="trip-info">
+                        <div class="trip-type">
+                            <select name="trip-type" id="trip-type">
+                                <option value="roundtrip">Roundtrip</option>
+                                <option value="oneway">One-way</option>
+                            </select>   
+                        </div>
+                        <div class="passenger-info dropdown">
+                            <button type="button" class="dropdown-toggle">1 Passenger, Economy</button>
+                            <div class="dropdown-menu">
+                                <div class="travel-class">
+                                    <label for="travel-class">Travel Class</label>
+                                    <select id="travel-class">
+                                        <option value="economy">Economy</option>
+                                        <option value="business">Business</option>
+                                        <option value="first">First</option>
+                                    </select>
+                                </div>
+                                <div class="passengers">
+                                    <label>Passengers</label>
+                                    <div class="passenger-counter">
+                                        <span>Adult</span>
+                                        <input type="number" id="adults" class="pass-inputs" value="1" min="1">
+                                    </div>
+                                    <div class="passenger-counter">
+                                        <span>Child</span>
+                                        <input type="number" id="children" class="pass-inputs" value="0" min="0">
+                                    </div>
+                                    <div class="passenger-counter">
+                                        <span>Infant (below 2 yrs)</span>
+                                        <input type="number" id="infants" class="pass-inputs" value="0" min="0">
+                                    </div>
+                                </div>
+                                <button type="button" class="done-button">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="travel-details">
+                        <div class="travel-from">
+                            <label for="from">From</label>
+                            <select name="from" id="from">
+                                <option value="">Select departure city</option>
+                                <option value="patna">Patna, Jayaprakash Narayan Airport (PAT)</option>
+                                <option value="AMD"> Ahmedabad, S. VallabhBhai Patel Airport (AMD) </option>
+                                <option value="Amritsar"> Amritsar, Sri Guru Ram Dass Jee Airport (ATQ) </option>
+                                <option value="Bagdogra"> Bagdogra, Bagdogra Airport (IXB) </option>
+                                <option value="Barcelona"> Barcelona, Barcelona Airport (BCN) </option>
+                                <option value="Bhubaneshwar"> Bhubaneswar, Biju Patnaik Airport (BBI) </option>
+                                <option value="Chandigarh"> Chandigarh, Chandigarh Airport (IXC) </option>
+                                <option value="Chennai"> Chennai, Chennai International Airport (MAA) </option>
+                                <option value="Dehradun"> Dehradun, Dehradun Airport (DED) </option>
+                                <option value="Frankfurt"> Frankfurt, Frankfurt International Airport (FRA) </option>
+                                <option value="Coimbatore"> Coimbatore, Coimbatore International Airport (CJB) </option>
+                                <option value="Goa"> Goa, Dabolim (GOI) </option>
+                                <option value="Hong-kong"> Hong Kong, Hong Kong International Airport (HKG) </option>
+                                <option value="Jammu"> Jammu, Jammu Airport (IXJ) </option>
+                                <option value="Jaipur"> Jaipur, Jaipur International Airport (JAI) </option>
+                                <option value="Hyderabad"> Hyderabad, Rajiv Gandhi International Airport (HYD) </option>
+                                <option value="Kolkata"> Kolkata, Subhas Chandra Bose Airport (CCU)</option>
+                                <option value="Muscat"> Muscat, Muscat International Airport (MCT) </option>
+                                
+                            </select>
+                        </div>
+                        <div class="travel-to">
+                            <label for="to">To</label>
+                            <select name="to" id="to">
+                                <option value="">Select arrival city</option>
+                                <option value="AMD">Ahmedabad, S. VallabhBhai Patel Airport (AMD)</option>
+                                <option value="AMD"> Ahmedabad, S. VallabhBhai Patel Airport (AMD) </option>
+                                <option value="Amritsar"> Amritsar, Sri Guru Ram Dass Jee Airport (ATQ) </option>
+                                <option value="Bagdogra"> Bagdogra, Bagdogra Airport (IXB) </option>
+                                <option value="Barcelona"> Barcelona, Barcelona Airport (BCN) </option>
+                                <option value="Bhubaneshwar"> Bhubaneswar, Biju Patnaik Airport (BBI) </option>
+                                <option value="Chandigarh"> Chandigarh, Chandigarh Airport (IXC) </option>
+                                <option value="Chennai"> Chennai, Chennai International Airport (MAA) </option>
+                                <option value="Dehradun"> Dehradun, Dehradun Airport (DED) </option>
+                                <option value="Frankfurt"> Frankfurt, Frankfurt International Airport (FRA) </option>
+                                <option value="Coimbatore"> Coimbatore, Coimbatore International Airport (CJB) </option>
+                                <option value="Goa"> Goa, Dabolim (GOI) </option>
+                                <option value="Hong-kong"> Hong Kong, Hong Kong International Airport (HKG) </option>
+                                <option value="Jammu"> Jammu, Jammu Airport (IXJ) </option>
+                                <option value="Jaipur"> Jaipur, Jaipur International Airport (JAI) </option>
+                                <option value="Hyderabad"> Hyderabad, Rajiv Gandhi International Airport (HYD) </option>
+                                <option value="Kolkata"> Kolkata, Subhas Chandra Bose Airport (CCU)</option>
+                                <option value="Muscat"> Muscat, Muscat International Airport (MCT) </option>
+                            </select>
+                        </div>
+                        <div class="travel-date">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="travel-search">
+                            <button type="submit">Search Flights</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <section>
+      <div class="place-container">
+        <div class="place-title">
+          <h1> Discover the Majestic Kilimanjaro: Your African Adventure Awaits</h1>
+        </div>
+        <div class="place-hero">
+          <img src="./assets/kilimanaro.png" alt="kilimanaro">
+        </div>
+        <div   class="place-content">
+          <p> Kilimanjaro, Africa's highest peak and one of the Seven Summits of the world, is a breathtaking destination for adventure seekers and nature enthusiasts. <br>Towering at 19,341 feet (5,895 meters), this iconic volcano offers a unique opportunity to experience the beauty and grandeur of the African continent.</p>
+          <h3> Why Choose Kilimanjaro? </h3>
+          <p><strong>Natural Wonder:</strong> Kilimanjaro is a UNESCO World Heritage Site, renowned for its diverse ecosystems, including rainforests, alpine deserts, and glaciers.</p>
+          <p><strong>Beautiful Views:</strong> Kilimanjaro's spectacular views of the surrounding mountains and valleys are unmatched, making it a popular tourist destination.</p>
+          <p><strong>Endless Adventures:</strong> Kilimanjaro is a popular tourist destination for adventurers, from hiking to trekking, kayaking, and mountain biking.</p>
+          <p><strong>Luxurious Lodges:</strong> Kilimanjaro has a wide range of luxury hotels and resorts, including the world-famous Kilimanjaro Resort and the iconic Kilimanjaro Village.</p>
+          <p><strong>Friendly People:</strong> Kilimanjaro is known for its friendly people, who are always willing to help you discover the hidden gems of the place.</p>
+          <h3> Kilimanjaro Tourism </h3>
+          <p>Kilimanjaro is a popular tourist destination for both visitors and locals. The city is known for its luxury hotels and resorts, as well as its friendly people. The city is also famous for its diverse ecosystems, including rainforests, alpine deserts, and glaciers.</p>
+          <p>Kilimanjaro is a popular tourist destination for both visitors and locals. The city is known for its luxury hotels and resorts, as well as its friendly people. The city is also famous for its diverse ecosystems, including rainforests, alpine deserts, and glaciers.</p>
+          <p>Kilimanjaro is a popular tourist destination for both visitors and locals. The city is known for its luxury hotels and resorts, as well as its friendly people. The city is also famous for its diverse ecosystems, including rainforests, alpine deserts, and glaciers.</p>
+          
+
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-containt">
+                <h3> About WINGS</h3>
+                <ul>
+                    <li><a href="#"> Careers </a></li>
+                    <li><a href="#"> Company </a></li>
+                    <li><a href="#"> Media </a></li>
+                    <li><a href="#"> Sustainability </a></li>        
+                </ul>
+            </div>
+            <div class="footer-containt">
+                <h3> Services </h3>
+                <ul>
+                    <li><a href="#"> Check-in Info </a></li>
+                    <li><a href="#"> Baggage </a></li>
+                    <li><a href="#"> Arrival & Departure </a></li>
+                    <li><a href="#"> Miles & More </a></li>
+                    <li><a href="#"> Accessible Travel </a></li>        
+                </ul>
+            </div>
+            <div class="footer-containt">
+                <h3> Customer Support </h3>
+                <ul>
+                    <li><a href="#"> Contact </a></li>
+                    <li><a href="#"> FAQ / Help </a></li>
+                    <li><a href="#"> Refund </a></li>
+                    <li><a href="#"> Chat Assistant </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Social -->
+        <div class="footer-info">
+            <div class="brand-info">
+                <img src="./assets/logo.png" alt="logo">
+            <p> &copy; 2021 WINGS Airlines. All rights reserved.</p>
+            </div>
+            
+            <div>
+                <ul>
+                    <li><a href="# "> Imprint </a></li>
+                    <li><a href=" "> Lufthansa Group</a></li>
+                    <li><a href="#"> Sitemap </a></li>
+                    <li><a href="#"> Legal </a></li>
+                    <li><a href="#"> Data Protection</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-toggle').click(function() {
+                $('.dropdown-menu').not($(this).next()).hide();
+                $(this).next('.dropdown-menu').toggle();
+            });
+            
+            $('.done-button').click(function() {
+                var travelClass = $('#travel-class').val();
+                var adults = $('#adults').val();
+                var children = $('#children').val();
+                var infants = $('#infants').val();
+                var totalPassengers = parseInt(adults) + parseInt(children) + parseInt(infants);
+                $('.dropdown-toggle').text(totalPassengers + ' Passenger' + (totalPassengers > 1 ? 's' : '') + ', ' + travelClass);
+                $('.dropdown-menu').hide();
+            });
+        });
+        $(document).ready(function() {
+  const hamburger = $('.hamburger');
+  const navMenu = $('nav ul');
+
+  hamburger.click(mobileMenu);
+
+  function mobileMenu() {
+    hamburger.toggleClass('active');
+    navMenu.toggleClass('active');
+  }
+
+  $('nav a').click(closeMenu);
+
+  function closeMenu() {
+    hamburger.removeClass('active');
+    navMenu.removeClass('active');
+  }
+});
+    </script>     
+</body>
+</html>

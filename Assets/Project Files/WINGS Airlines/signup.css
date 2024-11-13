@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  max-width: 80px;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.hamburger {
+  display: none;
+}
+
+.main-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.return a {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.return a:hover {
+  color: #D80100;
+}
+
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.registration-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-nav li {
+  margin-right: 2rem;
+  padding-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.form-nav li.active {
+  color: #D80100;
+  border-bottom: 2px solid #D80100;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+.dob-input {
+  display: flex;
+  gap: 1rem;
+}
+
+.dob-input input {
+  flex: 1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #D80100;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #b60000;
+}
+
+.btn-secondary {
+  background-color: #f4f4f4;
+  color: #333;
+}
+.login-back-btn{
+  padding: 0.75rem 2.4rem;
+  margin-left: 15px;
+}
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.form-footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  
+}
+#login-form{
+  display: none;
+}
+
+.consent-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.confirmation-message {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand-info {
+  display: flex;
+  align-items: baseline;
+}
+.brand-info p{
+  font-size: 13px;
+  margin: 10px;
+}
+.brand-info img {
+  max-width: 60px;
+  margin-right: .7rem;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  
+}
+
+.footer-links li {
+  margin-left: 1.5rem;
+}
+
+.footer-links a {
+  color: #646464;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+
+  .nav-menu li {
+      margin: 1rem 2rem;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #333;
+  }
+
+  .footer-info {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-links {
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content:center;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moderustic:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./myBooking.css">
+    <title>My Booking</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+          <div class="logo">   
+            <a href="./index.html"> <img src="./assets/logo.png" alt="WINGS logo"> </a>
+          </div>
+          <nav>
+            <ul>
+                <li><a href="./book&prepare.html">BOOK & PREPARE</a></li>
+                <li><a href="./myBooking.html">MY BOOKING</a></li>
+                <li><a href="./expwings.html">EXPLORE WINGS</a></li>
+                <li><a href="./signup.html">LOGIN & SIGNUP</a></li>
+                <li class="dropdown">
+                    <a href="#">SUPPORT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </nav>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </div>    
+      </header>
+     <section class="container">
+        <section class="flights">
+            <h2>Manage</h2>   
+            <div class="flights-container">
+                <button><a href=""> Check-in </a> </button>
+                <button><a href=""> Flight Status </a> </button>
+                <button><a href=""> Manage Booking </a> </button>
+                <button><a href=""> Seat Reservation </a> </button>
+                <button><a href=""> Rebook</a> </button>
+                <button><a href=""> Cancellation and Refund</a> </button>
+                <button><a href=""> Passenger Receipt</a> </button>
+                <button><a href=""> Delayed Baggage</a> </button>
+                
+            </div>        
+        </section>
+        <section class="travelInfo">
+            <h2> Extra Services </h2>
+            <div class="travelInfo-container">
+                <button><a href=""> Book Additional Baggage </a> </button>
+                <button><a href=""> Check-in Baggage from home</a> </button>
+                <button><a href=""> Book Upgrade</a> </button>
+                <button><a href=""> Pre-order Meals</a> </button>
+                <button><a href=""> Book Hotel </a> </button>
+                <button><a href=""> Book Rental Car </a> </button>
+            
+            </div>        
+        </section> 
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>        
+        $(document).ready(function() {
+      const hamburger = $('.hamburger');
+      const navMenu = $('nav ul');
+      hamburger.click(mobileMenu);
+      function mobileMenu() {
+        hamburger.toggleClass('active');
+        navMenu.toggleClass('active');
+      }
+      $('nav a').click(closeMenu);
+      function closeMenu() {
+        hamburger.removeClass('active');
+        navMenu.removeClass('active');
+  }
+});
+    </script>
+    
+    
+</body>
+</html>

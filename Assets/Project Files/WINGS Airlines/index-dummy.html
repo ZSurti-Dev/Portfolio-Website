@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style-dummy.css">
+    <title>WINGS Airlines</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">   
+            <img src="./assets/logo.png" alt="WINGS logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li id="book-and-prepare"><a href="./book&prepare.html">BOOK & PREPARE</a></li>
+                <li><a href="./myBooking.html">MY BOOKING</a></li>
+                <li><a href="./expwings.html">EXPLORE WINGS</a></li>
+                <li><a href="./signup.html">LOGIN & SIGNUP</a></li>
+                <li class="dropdown">
+                    <a href="#">SUPPORT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="assets/Hero background.png" alt="Hero image">
+        </section>
+
+        <section class="flight-booking">
+            <h2>FLIGHT BOOKING</h2>
+            <form class="booking-form">
+                <div class="trip-type">
+                    <input type="radio" name="trip-type" id="round-trip" value="round-trip" checked>
+                    <label for="round-trip">Round Trip</label>
+                    <input type="radio" name="trip-type" id="one-way" value="one-way">
+                    <label for="one-way">One Way</label>
+                </div>
+                <div class="location-inputs">
+                    <div class="fromLocation">
+                        <div class="location-icon">
+                            <img src="./assets/Icons/Arrival.png" alt="departure">
+                        </div>
+                        <div class="location-input">
+                            <label for="from">From</label>
+                            <input type="text" id="from" name="from" placeholder="From" value="Mumbai">
+                            <span class="airport-code">BOM</span>
+                            <p class="airport-name">Chatrapati Shivaji International Airport</p>
+                        </div>
+                    </div>
+                    <div class="toLocation">
+                        <div class="location-icon">
+                            <img src="./assets/Icons/Departure.png" alt="arrival">
+                        </div>
+                        <div class="location-input">
+                            <label for="to">To</label>
+                            <input type="text" id="to" name="to" placeholder="To" value="Luxembourg">
+                            <span class="airport-code">LUX</span>
+                            <p class="airport-name">Luxembourg Airport</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="date-inputs">
+                    <div class="date-input">
+                        <div class="date-icon">
+                            <img src="./assets/Icons/Calender.png" alt="Calendar">
+                        </div>
+                        <div class="date-field">
+                            <label for="departure-date">Departure</label>
+                            <input type="date" id="departure-date" name="departure-date" value="2024-10-03">
+                            <span class="date-info">Thu. 2024</span>
+                        </div>
+                    </div>
+                    <div class="date-input">
+                        <div class="date-icon">
+                            <img src="./assets/Icons/Calender.png" alt="Calendar">
+                        </div>
+                        <div class="date-field">
+                            <span class="return-info">Save more on round trip</span>
+                            <div class="add-date">
+                                <input type="checkbox" id="add-return-date">
+                                <label for="add-return-date">Add Return Date</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="search-btn">SEARCH FLIGHT</button>
+            </form>
+        </section>
+
+        <section class="booking-options">
+            <div class="option">
+                <img src="./assets/Icons/flight-1.png" alt="flight-1">
+                <h4>Flight Status</h4>
+            </div>
+            <div class="option">
+                <img src="./assets/Icons/flight-2.png" alt="flight-2">
+                <h4>My Booking / Check-in</h4>
+            </div>
+            <div class="option">
+                <img src="./assets/Icons/card.png" alt="card">
+                <h4>Miles & More</h4>
+            </div>
+        </section>
+
+        <section class="flight-offers">
+            <h2>FLIGHT OFFERS</h2>
+            <div class="offers-container">
+                <button id="leftScroll-btn" class="scroll-btn">&lt;</button>
+                <div class="offers-wrapper">
+                    <div class="offerCard">
+                        <a href="./FLIGHT-OFFERS/frankfurt.html"><img src="./assets/frankfurt.png" alt="frankfurt"></a>
+                        <h3>FRANKFURT</h3>
+                        <div class="offer-price">
+                            <p>from</p>
+                            <h3> &#8377; 39000/-</h3>
+                        </div>
+                    </div>
+                    <div class="offerCard">
+                        <a href="./FLIGHT-OFFERS/torronto.html"><img src="./assets/Torronto.png" alt="Torranto"> </a>
+                        <h3>TORRONTO</h3>
+                        <div class="offer-price">
+                            <p>from</p>
+                            <h3> &#8377; 71000/-</h3>
+                        </div>
+                    </div>
+                    <div class="offerCard">
+                        <a href="./FLIGHT-OFFERS/amsterdam.html"><img src="./assets/Amsterdam.png" alt="Amsterdam"></a>
+                        <h3>AMSTERDAM</h3>
+                        <div class="offer-price">
+                            <p>from</p>
+                            <h3> &#8377; 39000/-</h3>
+                        </div>
+                    </div>
+                    <div class="offerCard">
+                        <a href="./FLIGHT-OFFERS/luxembourg.html"><img src="./assets/luxembourg.png" alt="Lux"> </a>
+                        <h3>LUXEMBOURG</h3>
+                        <div class="offer-price">
+                            <p>from</p>
+                            <h3> &#8377; 35,500/-</h3>
+                        </div>
+                    </div>
+                    <img id="rightScroll-btn" src="./assets/Icons/scroll-right-arrow.png" alt="right-arrow">
+                    <div class="offerCard">
+                        <a href="./FLIGHT-OFFERS/london.html"><img src="./assets/London-flight.png" alt="London"></a>
+                        <h3>LONDON</h3>
+                        <div class="offer-price">
+                            <p>from</p>
+                            <h3> &#8377; 35,500/-</h3>
+                        </div>
+                    </div> 
+                </div>
+                <button id="rightScroll-btn" class="scroll-btn">&gt;</button>
+            </div>
+        </section>
+
+        <section class="assistance">
+            <h2 class="section-header">PERSONAL ASSISTANCE ON BOARD</h2>
+            <div class="assistance-container">
+                <div class="assistance-card"> 
+                    <img src="./assets/Medical comanion.png" alt="medical companion">
+                    <h3> Medical Companion </h3>
+                    <p class="assistance-text"> Professional support on the way to airport and throughout your whole trip.</p>
+                    <a href="./Assistance/medicalCompanion.html"> <button>Book Now </button> </a>    
+                </div>  
+                <div class="assistance-card"> 
+                    <img src="./assets/catering.png" alt="catering">
+                    <h3> Catering On Board </h3>
+                    <p class="assistance-text"> Fresh and varied meals of the highest quality. <br>En Guete.</p>
+                    <a href="./Assistance/cateringonboard.html"> <button>Book Now </button> </a>
+                 </div> 
+                <div class="assistance-card"> 
+                    <img src="./assets/students.png" alt="students">
+                    <h3> Student Offers </h3>
+                    <p class="assistance-text"> Enjoy free additional check-in baggage and extra savings with our Student fares.</p>
+                    <a href="./Assistance/WINGStudent.html"><button>Book Now </button></a>
+                </div> 
+                <div class="assistance-card"> 
+                    <img src="./assets/travel pass.png" alt="students">
+                    <h3> WINGS Travel Pass </h3>
+                    <p class="assistance-text"> Enjoy free WINGS Travel Pass for your next trip with your loving ones. </p>
+                   <a href="./Assistance/WINGStudent.html"><button>Book Now </button></a> 
+                </div>  
+                <!-- Assistance cards go here -->
+            </div>
+        </section>
+
+        <section class="deals">
+            <h2 class="section-header">FIND GREAT DEALS ON WINGS AIR</h2>
+            <div class="deal-card-container">
+                <div class="deal-card"> 
+                    <a href="./dealSection/brussels.html"><img src="./assets/brussels.png" alt="brussels"> </a>
+                    <h2 class="deal-title">BRUSSELS</h2>
+                    <p> 09 Sep 2024 - 18 Sep 2024 </p>
+                    <div class="sameline"> 
+                        <p> Economy starting from </p>
+                        <h2 class="price-text"> &#8377; 79000</h2>
+                    </div>
+                </div>  
+                <div class="deal-card"> 
+                     <a href="./dealSection/london.html"><img src="./assets/London.png" alt="london"> </a>
+                    <h2 class="deal-title">LONDON</h2>
+                    <p> 09 Sep 2024 - 18 Sep 2024 </p>
+                    <div class="sameline"> 
+                        <p> Economy starting from </p>
+                        <h2 class="price-text"> &#8377; 79000</h2>
+                    </div>  
+                </div> 
+                <div class="deal-card"> 
+                    <a href="./dealSection/kilimanjaro.html"><img src="./assets/kilimanaro.png" alt="kilimanjaro"></a>
+                    <h2 class="deal-title">KILIMANJARO</h2>
+                    <p> 09 Oct 2024 - 20 Oct 2024 </p>
+                    <div class="sameline"> 
+                     <p> Economy starting from </p>
+                     <h2 class="price-text"> &#8377; 91290</h2>
+                     </div>
+                </div>  
+                <div class="deal-card"> 
+                    <a href="./dealSection/paris.html"><img src="./assets/paris.png" alt="paris"></a>
+                    <h2 class="deal-title">PARIS</h2>
+                    <p> 09 Oct 2024 - 20 Oct 2024 </p>
+                    <div class="sameline"> 
+                        <p> Economy starting from </p>
+                        <h2 class="price-text"> INR 79000</h2>
+                    </div>
+                </div> 
+                <!-- Deal cards go here -->
+            </div>
+        </section>
+
+        <section class="additional-services">
+            <div class="service-cards">
+                <div class="smallCards">
+                    <!-- https://www.cars-swiss.com/EN?clientID=782750&_ga=2.42048931.72905439.1602575933-452916357.1587028014&_gl=1*ccviwz*_up*MQ..&gclid=Cj0KCQjwrKu2BhDkARIsAD7GBot3ZOB-esybIxdsfePwBoTGL_WKA-xZH4CKeu0f1sGQW3moub2WyGwaAsKdEALw_wcB&gclsrc=aw.ds#/searchcars -->
+                     <!-- Attach this address to the card -->
+                    <h3> Rental Cars</h3>
+                    <p>Travel safely and flexibly with a rental car with our partner</p>
+                </div>
+                <div class="smallCards">
+                    <h3> WINGS Choice</h3>
+                    <p>Make your journey even more comfortable with our additional services</p>
+                </div> 
+                <div class="smallCards">
+                    <h3> Book Hotel from hotel.com</h3>
+                    <p>Our Global partner have the best price for you</p>
+                </div> 
+                <div class="smallCards">
+                    <h3> Travel Insurance </h3>
+                    <p>Protect your trip with our comprehensive travel insurance plans.</p>
+                </div> 
+                <!-- Service cards go here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-containt"></div>
+                <h3> About WINGS</h3>
+                <ul>
+                    <li><a href="#"> Careers </a></li>
+                    <li><a href="#"> Company </a></li>
+                    <li><a href="#"> Media </a></li>
+                    <li><a href="#"> Sustainability </a></li>        
+                </ul>
+            </div>
+            <div class="footer-containt">
+                <h3> Services </h3>
+                <ul>
+                    <li><a href="#"> Check-in Info </a></li>
+                    <li><a href="#"> Baggage </a></li>
+                    <li><a href="#"> Arrival & Departure </a></li>
+                    <li><a href="#"> Miles & More </a></li>
+                    <li><a href="#"> Accessible Travel </a></li>        
+                </ul>
+            </div>
+            <div class="footer-containt">
+                <h3> Customer Support </h3>
+                <ul>
+                    <li><a href="#"> Contact </a></li>
+                    <li><a href="#"> FAQ / Help </a></li>
+                    <li><a href="#"> Refund </a></li>
+                    <li><a href="#"> Chat Assistant </a></li>
+                </ul>
+            </div>
+        </div>
+            <!-- Footer content goes here -->
+        </div>
+        <div class="footer-info">
+            <div class="brand-info">
+                <img src="./assets/logo.png" alt="logo">
+            <p> &copy; 2021 WINGS Airlines. All rights reserved.</p>
+            </div>
+            
+            <div>
+                <ul>
+                    <li><a href="# "> Imprint </a></li>
+                    <li><a href=" "> Lufthansa Group</a></li>
+                    <li><a href="#"> Sitemap </a></li>
+                    <li><a href="#"> Legal </a></li>
+                    <li><a href="#"> Data Protection</a></li>
+
+                </ul>
+            </div>
+            <!-- Footer info goes here -->
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script-dummy.js"></script>
+</body>
+</html>

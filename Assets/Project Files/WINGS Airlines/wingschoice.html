@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moderustic:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./wingschoice.css">
+    <title>WINGS Choice</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+          <div class="logo">   
+            <a href="./index.html"><img src="./assets/logo.png" alt="WINGS logo"></a>
+          </div>
+          <nav>
+            <ul>
+                <li><a href="./book&prepare.html">BOOK & PREPARE</a></li>
+                <li><a href="./myBooking.html">MY BOOKING</a></li>
+                <li><a href="./expwings.html">EXPLORE WINGS</a></li>
+                <li><a href="./signup.html">LOGIN & SIGNUP</a></li>
+                <li class="dropdown">
+                    <a href="#">SUPPORT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>    
+      </header>
+        <div class="container">
+            <h1>WINGS Choice Offers</h1>
+            <p>Additional services to enhance your travel experience.</p>
+            <div class="offers-container">
+                <div class="offer">
+                    <img src="./assets/WINGS choice/Advance Seat.jpg" alt="advance booking">
+                    <h2>Advance Seat Reservation</h2>
+                    <p>If you want a window seat or prefer more legroom, book the best seats now for an additional charge.</p>
+                    <button class="button" onclick="reserveSeat()">Reserve Seat</button>
+                </div>
+                <div class="offer">
+                    <img src="./assets/WINGS choice/additional baggage.png" alt="additional baggage">
+                    <h2>Additional Baggage</h2>
+                    <p>Need more baggage than covered by your allowance? Benefit from our special online rate.</p>
+                    <button class="button" onclick="buyExtraBaggage()">Buy Extra Baggage</button>
+                </div>
+                <div class="offer">
+                    <img src="./assets/WINGS choice/Upgrade option.png" alt="upgrade">
+                    <h2>Upgrade Options</h2>
+                    <p>Travel in greater comfort and enjoy exclusive meals and faster deboarding.</p>
+                    <button class="button" onclick="viewUpgradeOptions()">Upgrade Options</button>
+                </div>
+                <div class="offer">
+                    <img src="./assets/WINGS choice/Upgrade option.png" alt="upgrade">
+                    <h2>Order Your Meal Now</h2>
+                    <p>Choose your meals to be served during the flight, available up to 12 hours before departure.</p>
+                    <button class="button" onclick="preOrderMeal()">Pre-order Now</button>
+                </div>
+                <div class="offer">
+                    <img src="./assets/WINGS choice/economy.png" alt="economy">
+                    <h2>Have You Booked WINGS Economy Ticket?</h2>
+                    <p>Enjoy the benefits of Business Lounge as a WINGS Economy passenger.</p>
+                    <button class="button" onclick="preOrderMeal()">Book your lounge access now</button>
+                </div>
+                <div class="offer">
+                    <img src="./assets/WINGS choice/additional services.png" alt="addtional services">
+                    <h2> Additional Services available at online check-in</h2>
+                    <p>You can personalize your trip and make it even more enjoyable with our additional services at online check-in.</p>
+                    <button class="button" onclick="preOrderMeal()">Book Now</button>
+                </div>
+            </div>   
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-containt">
+                    <h3> About WINGS</h3>
+                    <ul>
+                        <li><a href="#"> Careers </a></li>
+                        <li><a href="#"> Company </a></li>
+                        <li><a href="#"> Media </a></li>
+                        <li><a href="#"> Sustainability </a></li>        
+                    </ul>
+                </div>
+                <div class="footer-containt">
+                    <h3> Services </h3>
+                    <ul>
+                        <li><a href="#"> Check-in Info </a></li>
+                        <li><a href="#"> Baggage </a></li>
+                        <li><a href="#"> Arrival & Departure </a></li>
+                        <li><a href="#"> Miles & More </a></li>
+                        <li><a href="#"> Accessible Travel </a></li>        
+                    </ul>
+                </div>
+                <div class="footer-containt">
+                    <h3> Customer Support </h3>
+                    <ul>
+                        <li><a href="#"> Contact </a></li>
+                        <li><a href="#"> FAQ / Help </a></li>
+                        <li><a href="#"> Refund </a></li>
+                        <li><a href="#"> Chat Assistant </a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Footer Social -->
+            <div class="footer-info">
+                <div class="brand-info">
+                    <img src="./assets/logo.png" alt="logo">
+                <p> &copy; 2021 WINGS Airlines. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <ul>
+                        <li><a href="# "> Imprint </a></li>
+                        <li><a href=" "> Lufthansa Group</a></li>
+                        <li><a href="#"> Sitemap </a></li>
+                        <li><a href="#"> Legal </a></li>
+                        <li><a href="#"> Data Protection</a></li>
+    
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>        
+        $(document).ready(function() {
+      const hamburger = $('.hamburger');
+      const navMenu = $('nav ul');
+      hamburger.click(mobileMenu);
+      function mobileMenu() {
+        hamburger.toggleClass('active');
+        navMenu.toggleClass('active');     }
+
+      $('nav a').click(closeMenu);
+      function closeMenu() {
+        hamburger.removeClass('active');
+        navMenu.removeClass('active');
+  }
+});
+    </script>    
+</body>
+</html>
