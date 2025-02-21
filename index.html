@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Portfolio Website</title>
     <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.ico">
 </head>
-<body>
+<body>  
     <!-- Navigation Section Starts Here... -->
     <nav class="navbar">
         <div class="logo">
@@ -36,7 +39,7 @@
             <p class="profession">Full Stack Developer & UI/UX Designer</p>
             <div class="cta-buttons">
                 <a href="#portfolio" class="btn primary">View Work</a>                
-                <a href="https://docs.google.com/presentation/d/15M7mkFYAOmHHzoFDyComcyD0KGn2MdU5EL2BVqIBKNU/edit?usp=sharing" class="btn secondary" target="_blank" rel="noopener noreferrer">Download Resume</a>
+                <a href="./Assets/Project Files/My_Resume.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">Download Resume</a>
                 <a href="#contact" class="btn secondary">Contact Me</a>
             </div>
         </div>
@@ -60,6 +63,7 @@
     <section id="skills" class="skills">
         <h2>My Skills</h2>
         <div class="skills-container">
+            <!-- Frontend Development -->
             <div class="skill-category">
                 <h3>Frontend Development</h3>
                 <div class="skill-items">
@@ -84,7 +88,13 @@
                     <div class="skill-item">
                         <span>React</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 70%"></div>
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Angular</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -95,13 +105,15 @@
                     </div>
                 </div>
             </div>
+    
+            <!-- Backend Development -->
             <div class="skill-category">
                 <h3>Backend Development</h3>
                 <div class="skill-items">
                     <div class="skill-item">
                         <span>Node.js</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 90%"></div>
+                            <div class="progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -113,7 +125,7 @@
                     <div class="skill-item">
                         <span>Git, GitHub & Version Control</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 80%"></div>
+                            <div class="progress" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -125,7 +137,7 @@
                     <div class="skill-item">
                         <span>Python</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 40%"></div>
+                            <div class="progress" style="width: 60%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -137,11 +149,19 @@
                     <div class="skill-item">
                         <span>PostgreSQL</span>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 40%"></div>
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>MongoDB (noSQL)</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <!-- Design -->
             <div class="skill-category">
                 <h3>Design</h3>
                 <div class="skill-items">
@@ -161,7 +181,7 @@
             </div>
         </div>
     </section>
-    <!-- Education Section Starts Here... -->
+    <!-- AcademicSection Starts Here... -->
      <section id="education" class="education">
         <h2>Academic Background</h2>
         <div class="education-info">
@@ -192,8 +212,8 @@
             <div class="edu-item">
                 <h3>Javascript</h3>
                 <p>2024</p>
-                <p>Scrimba</p>
-                <a href="./Assets/Project Files/Experience_Certificate.pdf" target="_blank">View Certificate</a>
+                <p>Udemy</p>
+                <a href="./Assets/Project Files/Learn JavaScript-Certificate.pdf" target="_blank">View Certificate</a>
             </div>
         </div>
      </section>
@@ -203,7 +223,7 @@
         <h2>Employment History</h2>
         <div class="employment-info">
             <div class="emp-item">
-                <h3>Cim press India Pvt. Ltd.</h3>
+                <h3>Cimpress India Pvt. Ltd.</h3>
                 <h4> Production Artist</h4>  
                 <p>Jan-2015 to Jun-2024</p> <br>
                 <p>As a member of the Design Team, I collaborated on creating and modifying customer artwork to meet specific requirements. During this time, I also served as a Customer Care Support Assistant, effectively communicating with the core CARE team <br> to address and resolve customer inquiries. <br><strong>I am a strong team player dedicated to contributing to the achievement of the company’s goals. </strong> </p> <br>
@@ -220,133 +240,211 @@
             <button class="filter-btn" data-filter="frontEnd">Frontend</button>
             <button class="filter-btn" data-filter="fullStack">Full Stack</button>
             <button class="filter-btn" data-filter="API">API</button>
-            <button class="filter-btn" data-filter="ui">UI Design</button>          
+            <button class="filter-btn" data-filter="Python">Python</button>
+            <button class="filter-btn" data-filter="ui">UI Design</button>
         </div>
-        <div class="portfolio-grid"> 
-            <!--FrontEnd Development Projects -->
-            <div class="portfolio-item" data-category="frontEnd">
-                <img src="./Assets/Images/WINGS.jpeg" alt="WINGS Airlines">
-                <div class="portfolio-overlay">
-                    <h3>Booking Website</h3>
-                    <p>A platform for booking travel and meeting various travel-related needs, utilizing HTML, CSS, and JavaScript.</p>
-                    <div class="portfolio-links">
-                        <a href="./Assets/Project Files/WINGS Airlines/index.html" target="_blank" class="btn primary">View Project</a>
-                        <a href="#" class="btn secondary">Source Code</a>
-                    </div>
+        <div class="portfolio-grid">
+            <!-- FrontEnd Development Projects -->
+            <div class="project-card color-1" data-category="frontEnd">
+                <h3 class="project-title">Booking Website</h3>
+                <p class="project-tech">HTML, CSS, JavaScript</p>
+                <p class="project-description">
+                    A platform for booking travel and meeting various travel-related needs.
+                </p>
+                <div class="project-links">
+                    <a href="./Assets/Project Files/WINGS Airlines/index.html" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="#" class="project-link color-1">Source Code</a>
                 </div>
-            </div>
-            <div class="portfolio-item" data-category="frontEnd">
-                <img src="./Assets/Images/Login-Register Form.PNG" alt="Login-Register">
-                <div class="portfolio-overlay">
-                    <h3>Login-Register Form</h3>
-                    <p>Component of Website to allow user to Login Or register, built using Bootstrap.</p>
-                    <div class="portfolio-links">
-                        <a href="https://www.loom.com/share/d046d7da7e464e1f8fb4bb207eb6ceef?sid=0d91860f-47e0-49cf-9dae-64d61cad35bb
-                        " class="btn primary" target="_blank">View Project</a>
-                        <a href="https://github.com/ZSurti-Dev/login-registerForm.git" class="btn secondary">Source Code</a>
-                    </div>
-                </div>
-            </div>            
-            <div class="portfolio-item" data-category="frontEnd">
-                <img src="./Assets/Images/EVM.PNG" alt="Event Management">
-                <div class="portfolio-overlay">
-                    <h3>Event Management</h3>
-                    <p>A platform for organizing your unforgettable events, built using Bootstrap.</p>
-                    <div class="portfolio-links">
-                        <a href="./Assets/Project Files/Bootstarp/index.html" target="_blank" class="btn primary">View Project</a>
-                        <a href="#" class="btn secondary">Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Full Stack Projects -->
-            <div class="portfolio-item" data-category="fullStack">
-                <img src="./Assets/Images/To-do.PNG" alt="To Do List">
-                <div class="portfolio-overlay">
-                    <h3>To-Do List</h3>
-                    <p>An Application where you record your daily task, utilizing  HTML,CSS, Javascript & React.</p>
-                    <div class="portfolio-links">
-                        <a href="https://z8f94f.csb.app/" target="_blank" class="btn primary">View Project</a>
-                        <a href="https://codesandbox.io/p/sandbox/managing-a-component-tree-practice-forked-z8f94f"  class="btn secondary">Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="fullStack">
-                <img src="./Assets/Images/Keeper-App.PNG" alt="Keeper">
-                <div class="portfolio-overlay">
-                    <h3>Keeper</h3>
-                    <p>An Application user can write notes and delete once completed, utilizing  HTML,CSS, Javascript & React.</p>
-                    <div class="portfolio-links">
-                        <a href="https://kgcl6p.csb.app/"  target="_blank" class="btn primary">View Project</a>
-                        <a href="https://codesandbox.io/p/sandbox/using-pre-built-react-components-forked-kgcl6p" target="_blank" class="btn secondary">Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="fullStack">
-                <img src="./Assets/Images/Emoji-Dictionary.PNG" alt="Emoji Dictionary">
-                <div class="portfolio-overlay">
-                    <h3>Emoji Dictionary - Reusable Cards</h3>
-                    <p>A Dictionary of Emoji with their meaning!  Utilizing  HTML,CSS, Javascript & React.</p>
-                    <div class="portfolio-links">
-                        <a href="https://fpwyzk.csb.app/"  target="_blank" class="btn primary">View Project</a>
-                        <a href="https://codesandbox.io/p/sandbox/mapping-components-practice-completed-forked-fpwyzk?workspaceId=10d64dc0-648e-45c4-9ed1-fd4c283f64a8" target="_blank" class="btn secondary">Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="fullStack">
-                <img src="./Assets/Images/Leads-Tracke.PNG" alt="Leads Tracker">
-                <div class="portfolio-overlay">
-                    <h3>Leads Tracker</h3>
-                    <p>A Leads Tracker app to help you save web links and current tabs for future use. Created with HTML,CSS & Javascript</p>
-                    <div class="portfolio-links">
-                        <a href="./Assets/Project Files/Leads Tracker App/index.html" target="_blank" class="btn primary">View Project</a>
-                        <a href="https://github.com/ZSurti-Dev/Leads-Tracker-App.git" target="_blank" class="btn secondary">Source Code</a>            
-                    </div>
-                </div>
-            </div>
-            <!-- API Projects -->
-            <div class="portfolio-item" data-category="API">
-                <img src="./Assets/Images/Task-Manager.PNG" alt="Task Manager">
-                <div class="portfolio-overlay">
-                    <h3>Task Manager</h3>
-                    <p>Task Manager App created using Javascript, EJS and REST API </p>
-                <div class="portfolio-links">
-                    <a href=" https://www.loom.com/share/4c07572690cc4f148a9bd2ca1906bfce?sid=c8b0031e-9753-47fe-9412-bc876e198521
-                    " target="_blank"  class="btn primary">View Project</a>
-                    <a href="https://github.com/ZSurti-Dev/Task-Manager-API.git" class="btn secondary">Source Code</a>            
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item" data-category="API">
-            <img src="./Assets/Images/Blog-API.PNG" alt="Blog-Post">
-            <div class="portfolio-overlay">
-                <h3>Blogging App</h3>
-                <p> A user-friendly blog post application for creating, editing, deleting content. Created using Javascript and REST API </p>
-            <div class="portfolio-links">
-                <a href=" https://www.loom.com/share/f1162d836dd74d7f83be68f619bfe8d9?sid=425f03ce-ebe5-4247-81b6-b0252556853d" target="_blank"  class="btn primary">View Project</a>
-                <a href="https://github.com/ZSurti-Dev/Task-Manager-API.git" class="btn secondary" target="_blank">Source Code</a>            
-            </div>
-        </div>
-    </div>
-            <!-- UI Design Projects -->
-            <div class="portfolio-item" data-category="ui">
-                <img src="./Assets/Images/Globie App.PNG" alt="Globie">
-                <div class="portfolio-overlay">
-                    <h3>Globie App</h3>
-                    <p>A Travel Booking Application</p>
-                    <div class="portfolio-links">
-                        <a href="https://www.loom.com/share/80c3959e7001403fb1cf4a4d9e5a2636?sid=dc7ef754-7a8a-4adb-ae27-8f24b7b78b71" target="_blank" class="btn primary">View Design</a>
-                    </div>
+            </div>     
+
+            
+            <div class="project-card color-2" data-category="frontEnd">
+                <h3 class="project-title">Login-Register Form</h3>
+                <p class="project-tech">Bootstrap</p>
+                <p class="project-description">
+                    Component of Website to allow user to Login Or register.
+                </p>
+                <div class="project-links">
+                    <a href="https://www.loom.com/share/d046d7da7e464e1f8fb4bb207eb6ceef?sid=0d91860f-47e0-49cf-9dae-64d61cad35bb" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://github.com/ZSurti-Dev/login-registerForm.git" class="project-link color-1">Source Code</a>
                 </div>
             </div>
     
-            <div class="portfolio-item" data-category="ui">
-                <img src="./Assets/Images/Ui Design.PNG" alt="UI Design">
-                <div class="portfolio-overlay">
-                    <h3>UI Design</h3>
-                    <p>Interface Sample Designs.</p>
-                    <div class="portfolio-links">
-                        <a href="./Assets/Project Files/Figma Portfolio File.mp4" target="" class="btn primary">View Design</a>
-                    </div>
+            <div class="project-card color-1" data-category="frontEnd">
+                <h3 class="project-title">Event Management</h3>
+                <p class="project-tech">Bootstrap</p>
+                <p class="project-description">
+                    A platform for organizing your unforgettable events.
+                </p>
+                <div class="project-links">
+                    <a href="./Assets/Project Files/Bootstarp/index.html" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="#" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <!-- Full Stack Projects -->
+            <div class="project-card color-2" data-category="fullStack">
+                <h3 class="project-title">To-Do List</h3>
+                <p class="project-tech">HTML, CSS, JavaScript, React</p>
+                <p class="project-description">
+                    An Application where you record your daily tasks.
+                </p>
+                <div class="project-links">
+                    <a href="https://z8f94f.csb.app/" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://codesandbox.io/p/sandbox/managing-a-component-tree-practice-forked-z8f94f" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <div class="project-card color-1" data-category="fullStack">
+                <h3 class="project-title">Keeper</h3>
+                <p class="project-tech">HTML, CSS, JavaScript, React</p>
+                <p class="project-description">
+                    An Application user can write notes and delete once completed.
+                </p>
+                <div class="project-links">
+                    <a href="https://kgcl6p.csb.app/" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://codesandbox.io/p/sandbox/using-pre-built-react-components-forked-kgcl6p" target="_blank" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <div class="project-card color-2" data-category="fullStack">
+                <h3 class="project-title">Emoji Dictionary - Reusable Cards</h3>
+                <p class="project-tech">HTML, CSS, JavaScript, React</p>
+                <p class="project-description">
+                    A Dictionary of Emoji with their meaning!
+                </p>
+                <div class="project-links">
+                    <a href="https://fpwyzk.csb.app/" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://codesandbox.io/p/sandbox/mapping-components-practice-completed-forked-fpwyzk?workspaceId=10d64dc0-648e-45c4-9ed1-fd4c283f64a8" target="_blank" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <div class="project-card color-1" data-category="fullStack">
+                <h3 class="project-title">Leads Tracker</h3>
+                <p class="project-tech">HTML, CSS, JavaScript</p>
+                <p class="project-description">
+                    A Leads Tracker app to help you save web links and current tabs for future use.
+                </p>
+                <div class="project-links">
+                    <a href="./Assets/Project Files/Leads Tracker App/index.html" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://github.com/ZSurti-Dev/Leads-Tracker-App.git" target="_blank" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <!-- API Projects -->
+            <div class="project-card color-2" data-category="API">
+                <h3 class="project-title">Task Manager</h3>
+                <p class="project-tech">JavaScript, EJS, REST API</p>
+                <p class="project-description">
+                    Task Manager App created using JavaScript, EJS and REST API.
+                </p>
+                <div class="project-links">
+                    <a href="https://www.loom.com/share/4c07572690cc4f148a9bd2ca1906bfce?sid=c8b0031e-9753-47fe-9412-bc876e198521" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://github.com/ZSurti-Dev/Task-Manager-API.git" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <div class="project-card color-1" data-category="API">
+                <h3 class="project-title">Blogging App</h3>
+                <p class="project-tech">JavaScript, REST API</p>
+                <p class="project-description">
+                    A user-friendly blog post application for creating, editing, deleting content.
+                </p>
+                <div class="project-links">
+                    <a href="https://www.loom.com/share/f1162d836dd74d7f83be68f619bfe8d9?sid=425f03ce-ebe5-4247-81b6-b0252556853d" target="_blank" class="project-link color-1">View Project</a>
+                    <a href="https://github.com/ZSurti-Dev/Task-Manager-API.git" target="_blank" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+    
+            <!-- UI Design Projects -->
+            <div class="project-card color-2" data-category="ui">
+                <h3 class="project-title">Globie App</h3>
+                <p class="project-tech">UI Design</p>
+                <p class="project-description">
+                    A Travel Booking Application.
+                </p>
+                <div class="project-links">
+                    <a href="https://www.loom.com/share/80c3959e7001403fb1cf4a4d9e5a2636?sid=dc7ef754-7a8a-4adb-ae27-8f24b7b78b71" target="_blank" class="project-link color-1">View Design</a>
+                </div>
+            </div>
+    
+            <div class="project-card color-1" data-category="ui">
+                <h3 class="project-title">UI Design</h3>
+                <p class="project-tech">UI Design</p>
+                <p class="project-description">
+                    Interface Sample Designs.
+                </p>
+                <div class="project-links">
+                    <a href="./Assets/Project Files/Figma Portfolio File.mp4" class="project-link color-1">View Design</a>
+                </div>
+            </div>
+            <!-- Interview Schedular -->
+            <div class="project-card color-2" data-category="fullStack">
+                <h3 class="project-title">Interview Schedular</h3>
+                <p class="project-tech">React.js CSS</p>
+                <p class="project-description">
+                    A Decent Application to schedule interviews.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/ZSurti-Dev/InterviewScheular" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+
+            <!-- Chatting Application -->
+            <div class="project-card color-1" data-category="fullStack">
+                <h3 class="project-title">Chatting Application</h3>
+                <p class="project-tech">HTML,CSS, REACT, WebSocket.io</p>
+                <p class="project-description">
+                    Simple chatting application where users can join the room with their name and chat.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/ZSurti-Dev/Chatting-App" class="project-link color-1">Source Code</a>
+                </div>
+            </div>
+
+            <!-- Python Projects -->
+            <div class="project-card color-2" data-category="Python">
+                <h3 class="project-title">Game Projects</h3>
+                <p class="project-tech">Python</p>
+                <!-- <p class="project-description">
+                    A collection of Python-based games including:
+                </p> -->
+                <div class="python-list">
+                    <p><a href="https://github.com/ZSurti-Dev/Emoji-Quest-Decode-Survive-python-">Emoji-Quest |</a> <a href="https://github.com/ZSurti-Dev/Multiplayer-RockPaperScissors-Python-"> Multiplayer Rock-Paper-Scissors |</a> <a href="https://github.com/ZSurti-Dev/Mystical-Number-Adventure-Python-">Mystical Number Adventure |</a> <a href="https://github.com/ZSurti-Dev/Space-Exploration-Adventure-Python-">Space Exploration Adventure</a></p>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/ZSurti-Dev" class="project-link color-1">Github Link</a>
+                </div>
+            </div>   
+            
+            <div class="project-card color-2" data-category="Python">
+                <h3 class="project-title">Utility Projects</h3>
+                <p class="project-tech">Python</p>
+                <!-- <p class="project-description">
+                    A collection of utility applications including:
+                </p> -->
+                <div class="python-list"> 
+                    <p><a href="https://github.com/ZSurti-Dev/VaultGuard---Simple-Secure-Password-Manager">Password Manager |</a> <a href="https://github.com/ZSurti-Dev/Secret-Valut-python-"> Secret Vault |</a> <a href="https://github.com/ZSurti-Dev/Tech-Trivia-Python-">Tech-Trivia</a> </p>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/ZSurti-Dev" class="project-link color-1">Github Link</a>
+                </div>
+            </div>
+
+            <div class="project-card color-2" data-category="Python">
+                <h3 class="project-title">Adventure & Puzzle Projects</h3>
+                <p class="project-tech">Python</p>
+                <!-- <p class="project-description">
+                    A coll. of Adventure & Puzzle  games including:
+                </p> -->
+                <div class="python-list">
+                    <p><a href="https://github.com/ZSurti-Dev/Pathway-of-Destiny-Python-">Pathway of Destiny | </a> <a href="https://github.com/ZSurti-Dev/The-Magical-Forest"> The Magical Forest | </a> <a href="https://github.com/ZSurti-Dev/Time-Traveller-Dilemma-python-">Time Travel |</a> <a href="https://github.com/ZSurti-Dev/Word-Wizard-">Word Wizard</a></p>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/ZSurti-Dev" class="project-link color-1">Github Link</a>
                 </div>
             </div>
         </div>
