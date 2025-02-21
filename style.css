@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", serif;
 }
 .logo img{
     width: 50px;
@@ -292,34 +293,56 @@ h2::after {
     font-size: 1.4rem;
 }
 /* Skills Section */
+.skills {
+    margin: 0;
+    padding: 40px 0; /* Added padding to control space around the section */
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Added margin to control space below the heading */
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
 .skills-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 30px; /* Adjusted gap for better spacing */
+    padding: 0 20px; /* Added padding to prevent content from touching the edges */
 }
 
 .skill-category {
-    background: rgb(250, 248, 248);
-    padding: 30px;
+    background:#f0f0f0;
+    padding: 25px; /* Adjusted padding for better spacing */
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px); /* Added hover effect for interactivity */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .skill-category h3 {
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
     color: var(--primary-color);
+    font-size: 1.5em;
 }
 
 .skill-item {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Adjusted margin for better spacing */
 }
 
 .skill-item span {
     display: block;
     margin-bottom: 8px;
     font-weight: 520;
+    font-size: 1em;
+    color: #333;
 }
 
 .progress-bar {
@@ -397,7 +420,7 @@ h2::after {
     font-size: 1rem;
 }
 .emp-item {
-    background:#f5f5f5;
+    background:#eeeeee;
     padding: 30px;
     max-width: 850px;
     border-radius: 10px;
@@ -437,81 +460,147 @@ h2::after {
 }
 
 
+
 /* Portfolio Section */
+.portfolio{
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block;
+}
 .portfolio-filters {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
+    gap: 12px;
+    margin: 20px 0 30px;  /* Reduced top margin */
     flex-wrap: wrap;
 }
 
 .filter-btn {
-    padding: 8px 20px;
+    padding: 6px 16px;  /* Slightly smaller padding */
     border: none;
     background: none;
     cursor: pointer;
     font-weight: 500;
-    transition: var(--transition);
-    border-radius: 20px;
+    transition: all 0.2s ease;
+    border-radius: 16px;
+    font-size: 0.95rem;
 }
 
 .filter-btn:hover {
-    color: var(--primary-color);
+    color: #466f5f;
 }
 
 .filter-btn.active {
-    background: var(--primary-color);
+    background: #16423C;
     color: white;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Slightly smaller cards */
+    gap: 20px;  /* Reduced gap */
+    max-width: 100%;
     margin: 0 auto;
 }
 
-.portfolio-item {
-    position: relative;
-    border-radius: 10px;
+.project-card {
+    padding: 16px;  /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
     overflow: hidden;
-    cursor: pointer;
-    height: 250px;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #173295;
+    color: #333;
+    height: 100%;  /* Ensure consistent height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: var(--transition);
-    padding: 20px;
-    color: white;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);  /* Subtle lift */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 1.2em;  /* Smaller title */
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d2d2d;
+}
+
+.project-tech {
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.project-description {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    flex-grow: 1;  /* Push links to bottom */
+}
+
+.project-links {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;  /* Push to bottom */
+}
+
+.project-link {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Color variations - Softer palette */
+.project-card.color-1 {
+    background-color: #C4DAD2;
+}
+
+.project-card.color-2 {
+    background-color: #E9EFEC;
+}
+
+.project-link.color-1 {
+    background-color: #6A9C89;
+}
+.project-link:hover {
+    background-color: #4e7d6b;
+    transform: translateY(-1px);
+}
+
+/* Add this class to your portfolio section title */
+.portfolio-title {
+    font-size: 2em;
+    font-weight: 600;
     text-align: center;
+    margin: 40px 0 20px;  /* Reduced top margin */
+    color: #000000;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
+/* Python cards */
 
-.portfolio-item:hover img {
-    transform: scale(1.1);
+.python-list{
+    margin-bottom: 5px;
+}
+.python-list a{
+    text-decoration: none;
+    color: #737275;
+    font-size: 13px;
+}
+.python-list a:hover{
+    color: #100BE4;
+    font-weight: 500;
 }
 
 /* Contact Section */
@@ -610,12 +699,8 @@ h2::after {
         flex-direction: column;
         align-items: center;
     }
-    
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
 }
+
 /* Tablet and smaller desktop screens */
 @media (max-width: 1024px) {
     .education-info {
@@ -794,6 +879,3 @@ h2::after {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
 }
-
-
-
