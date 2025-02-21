@@ -258,3 +258,33 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all filter buttons and projects
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-card');
+
+    // Add click event to each filter button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Get the filter value
+            const filter = button.getAttribute('data-filter');
+            
+            // Filter projects
+            projects.forEach(project => {
+                const category = project.getAttribute('data-category');
+                
+                if (filter === 'all' || filter.toLowerCase() === category.toLowerCase()) {
+                    project.classList.remove('hide');
+                } else {
+                    project.classList.add('hide');
+                }
+            });
+        });
+    });
+});
