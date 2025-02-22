@@ -359,44 +359,151 @@ h2::after {
     width: 0;
     transition: width 1s ease;
 }
-/* Education Section */
+/* ................................................................... */
+/* Common styles for sections */
 .education {
     background: var(--light-bg);
+    padding: 20px;
+}
+
+/* Grid layouts */
+.education-info,
+.employment-info {
+    display: grid;
+    gap: 30px;
 }
 
 .education-info {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.edu-item {
+.employment-info {
+    grid-template-columns: 1fr;
+    padding-left: 350px;
+}
+
+/* Common card styles */
+.edu-item,
+.emp-item {
     background: white;
     padding: 30px;
-    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: var(--transition);
+    height: 100%;
 }
-.edu-item:hover {
+
+.edu-item:hover,
+.emp-item:hover {
     transform: translateY(-5px);
 }
 
-.edu-item i {
+/* Icon styles */
+.edu-item i,
+.emp-item i {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 15px;
 }
-.edu-item a{
+
+/* Link styles */
+.edu-item a,
+.emp-item a {
     text-decoration: none;
     color: black;
     font-size: 13px;
+    display: inline-block;
+    margin-top: 10px;
 }
-.edu-item a:hover{
+
+.edu-item a:hover,
+.emp-item a:hover {
     text-decoration: underline;
     color: #100BE4;
     font-weight: 600;
 }
+
+/* Specific styles for employment items */
+.emp-item {
+    background: #eeeeee;
+    max-width: 850px;
+}
+
+.emp-item h3 {
+    font-size: 1.4rem;
+}
+
+.emp-item h4 {
+    font-size: 1rem;
+}
+
+.emp-item p {
+    text-align: justify;
+}
+
+.emp-item a {
+    text-align: right;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .education-info {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+    .employment-info {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .employment-info {
+        padding: 0 15px;
+    }
+
+    .emp-item,
+    .edu-item {
+        padding: 20px;
+    }
+
+    .emp-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        padding: 15px;
+    }
+
+    .education-info {
+        gap: 15px;
+    }
+
+    .edu-item,
+    .emp-item {
+        padding: 15px;
+    }
+
+    .emp-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .emp-item h4 {
+        font-size: 0.9rem;
+    }
+}
+
 .contact-form {
     background: white;
     padding: 40px;
@@ -404,54 +511,7 @@ h2::after {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Employment History section */
 
-
-.employment-info {
-    display: grid;
-    padding-left: 350px;
-    grid-template-columns: 1fr;
-   
-}
-.emp-item h3{
-    font-size: 1.4rem;
-}
-.emp-item h4{
-    font-size: 1rem;
-}
-.emp-item {
-    background:#eeeeee;
-    padding: 30px;
-    max-width: 850px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: var(--transition);
-    justify-content: center;
-    align-items: center;
-}
-.emp-item:hover {
-    transform: translateY(-5px);
-}
-
-.emp-item i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-.emp-item a{
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-    text-align: right;
-}
-.emp-item p {
-    text-align: justify;
-}
-.emp-item a:hover{
-    text-decoration: underline;
-    color: #100BE4;
-    font-weight: 600;
-}
 .contact-form {
     background: white;
     padding: 40px;
@@ -523,7 +583,7 @@ h2::after {
 
 .project-card:hover {
     transform: translateY(-3px);  /* Subtle lift */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-title {
@@ -704,20 +764,7 @@ h2::after {
 
 /* Tablet and smaller desktop screens */
 @media (max-width: 1024px) {
-    .education-info {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        padding: 0 20px;
-    }
-
-    .employment-info {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .emp-item {
-        max-width: 100%;
-    }
+   
 
     .portfolio-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -731,15 +778,7 @@ h2::after {
 
 /* Mobile devices */
 @media (max-width: 768px) {
-    .education-info {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .edu-item {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
+ 
     .contact-info {
         grid-template-columns: 1fr;
         padding: 0 20px;
@@ -803,14 +842,7 @@ h2::after {
     .cta-buttons {
         gap: 15px;
     }
-    .education-info {
-        grid-template-columns: 1fr;
-        
-    }
-    .edu-item{
-        max-width: 100vw;
-        
-    }
+    
 
     .btn {
         padding: 10px 25px;
