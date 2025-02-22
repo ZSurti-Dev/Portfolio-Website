@@ -493,11 +493,11 @@ h2::after {
 }
 
 .filter-btn:hover {
-    color: #466f5f;
+    color: #789DBC;
 }
 
 .filter-btn.active {
-    background: #16423C;
+    background: #789DBC;
     color: white;
 }
 
@@ -564,19 +564,20 @@ h2::after {
 
 /* Color variations - Softer palette */
 .project-card.color-1 {
-    background-color: #C4DAD2;
+    background-color: #C9E9D2;
 }
 
 .project-card.color-2 {
-    background-color: #E9EFEC;
+    background-color: #FFE3E3;
 }
 
 .project-link.color-1 {
-    background-color: #6A9C89;
+    background-color: #6389a7;
 }
 .project-link:hover {
-    background-color: #4e7d6b;
+    background-color: #4a6a83;
     transform: translateY(-1px);
+
 }
 
 /* Add this class to your portfolio section title */
