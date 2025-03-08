@@ -380,8 +380,8 @@ h2::after {
 }
 
 .employment-info {
-    grid-template-columns: 1fr;
-    padding-left: 350px;
+    grid-template-columns: repeat(2, 1fr);
+    
 }
 
 /* Common card styles */
