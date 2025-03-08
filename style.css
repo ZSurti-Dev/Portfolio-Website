@@ -457,6 +457,7 @@ h2::after {
     .employment-info {
         padding-left: 20px;
         padding-right: 20px;
+        grid-template-columns: 1fr;
     }
 }
 
